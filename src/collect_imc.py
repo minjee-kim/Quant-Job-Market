@@ -93,6 +93,9 @@ for job in jobs:
 
 df = pd.DataFrame(rows)
 
+print("\nFirst cleaned description:")
+print(df["description"].iloc[0])
+
 print("\nData dimensions:")
 print(df.shape)
 
