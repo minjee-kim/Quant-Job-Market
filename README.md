@@ -1,12 +1,12 @@
 # Quant-Job-Market
 
-What do private-markets quant seats ask of a statistics PhD?
+What are private-markets quant teams researching, and what language do they use?
 
-- `data/raw/current_postings.csv` — live as of 2026-10-02
-- `data/raw/past_postings.csv` — closed, with hire search
-- `data/raw/unverified_postings.csv` — aggregator only, not treated as filled
-- `data/raw/hire_search.csv` — public profiles checked against those reqs
-- `data/raw/private_markets_quant_postings.csv` — first combined scrape, before the split
-- `src/collect_private_markets.py` — fetch and extract
+Hire matching is parked. The working question is the research vocabulary of private-markets quantitative investment science: benchmarks, nowcasting, cash-flow pacing, manager scores.
+
+- `data/raw/research_keywords.csv` — phrases taken from published research and from quant job text
+- `src/extract_keywords.py` — counts those phrases in a text file
+- `data/raw/current_postings.csv` — live seats, kept as a language source
+- `data/raw/hire_search.csv` — earlier dead end, no posting-to-person match
 
 IMC public-markets board is removed.

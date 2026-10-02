@@ -1,0 +1,42 @@
+phrase,category,where_it_shows_up,source
+investment-level benchmark,data object,HarbourVest QIS research product,https://www.harbourvest.com/harbourvest-partners-releases-q3-2025-private-equity-benchmark-performance-data/
+fund-level benchmark,data object,contrast case in HarbourVest writeups,https://www.harbourvest.com/us/en/institutional-investor/quantitative-investment-science/benchmarking.html
+time-weighted return,performance metric,used so PE can be compared with public indexes,https://www.harbourvest.com/us/en/institutional-investor/quantitative-investment-science/benchmarking.html
+sector weight,decision use,attribution of buyout benchmark returns,https://www.harbourvest.com/us/en/institutional-investor/quantitative-investment-science/benchmarking.html
+timing decision,decision use,HarbourVest asks how sector timing drives returns,https://www.harbourvest.com/us/en/institutional-investor/quantitative-investment-science/benchmarking.html
+public-market comparison,decision use,apples-to-apples with MSCI ACWI,https://www.harbourvest.com/us/en/institutional-investor/quantitative-investment-science/benchmarking.html
+risk factor,method,factor exposure analysis on private holdings,https://www.harbourvest.com/us/en/institutional-investor/quantitative-investment-science/benchmarking.html
+NAV nowcasting,method,HarbourVest proprietary model for valuations ahead of reported results,https://www.harbourvest.com/why-harbourvest/quantitative-investment-science/
+manager selection,decision use,QIS use case; dispersion across GPs,https://www.harbourvest.com/us/en/general-public/quantitative-investment-science.html
+manager dispersion,research claim,stated source of private-markets alpha,https://www.harbourvest.com/us/en/general-public/quantitative-investment-science.html
+information asymmetry,research claim,HarbourVest rationale for systematic tools,https://www.harbourvest.com/us/en/general-public/quantitative-investment-science.html
+portfolio construction,decision use,QIS and StepStone both use this phrase,https://www.stepstonegroup.com/news-insights/a-systematic-approach-to-private-debt-allocation-in-institutional-portfolios/
+liquidity management,decision use,evergreen job text and QIS risk framework,https://www.efinancialcareers.com/jobs-USA-MA-Boston-Quantitative_Researcher_Evergreen_Portfolio_Management_Boston_or_Toronto.id24564666
+commitment pacing,method,PitchBook and Meketa allocator models,https://pitchbook.com/blog/best-practices-for-forecasting-cash-flows
+cash flow forecasting,method,PitchBook empirical model versus Takahashi-Alexander,https://pitchbook.com/blog/best-practices-for-forecasting-cash-flows
+Takahashi-Alexander model,method,theoretical cash-flow baseline,https://pitchbook.com/blog/best-practices-for-forecasting-cash-flows
+Monte Carlo,method,PitchBook cash-flow ranges; also a HarbourVest job preference,https://pitchbook.com/blog/best-practices-for-forecasting-cash-flows
+TVPI,performance metric,PitchBook cash-flow input,https://pitchbook.com/blog/best-practices-for-forecasting-cash-flows
+DPI,performance metric,PitchBook uncertainty proxy in manager scores,https://files.pitchbook.com/website/files/pdf/PitchBook_Manager_Performance_Scoring.pdf
+IRR,performance metric,converted to a z-score in manager scoring,https://files.pitchbook.com/website/files/pdf/PitchBook_Manager_Performance_Scoring.pdf
+vintage year,data object,peer-group control in manager scores,https://files.pitchbook.com/website/files/pdf/PitchBook_Manager_Performance_Scoring.pdf
+z-score,method,PitchBook manager performance score,https://files.pitchbook.com/website/files/pdf/PitchBook_Manager_Performance_Scoring.pdf
+manager score,method,GP fund-family ranking,https://files.pitchbook.com/website/files/pdf/PitchBook_Manager_Performance_Scoring.pdf
+cash flow speed,method,PitchBook score for call pace,https://files.pitchbook.com/pdf/PitchBook+Benchmarking+Methodology.pdf
+peer benchmark,data object,BlackRock / Preqin indices and custom peer sets,https://www.investmentnews.com/alternatives/blackrock-expands-aladdins-private-markets-benchmarking-tools/267312
+whole portfolio,decision use,public plus private look-through on Aladdin,https://www.blackrock.com/aladdin/discover/news/mapping-the-next-frontier-in-private-markets-in-conversation-with-mark-ohare
+nowcasting,method,BlackRock job text for private-asset values and indexes,https://www.themuse.com/jobs/blackrock/private-markets-quantitative-modeler-vice-president
+Bayesian,method,named in the BlackRock private-markets modeler posting,https://www.themuse.com/jobs/blackrock/private-markets-quantitative-modeler-vice-president
+time series,method,named in the BlackRock posting,https://www.themuse.com/jobs/blackrock/private-markets-quantitative-modeler-vice-president
+private credit,asset class,Aladdin / Preqin expansion: BDC and semi-liquid,https://www.blackrock.com/aladdin/discover/press-release/blackrock-aladdin-expands-private-credit-solutions-on-preqin
+default and recovery,performance metric,private-credit asset-level benchmarks,https://www.blackrock.com/aladdin/discover/press-release/blackrock-aladdin-expands-private-credit-solutions-on-preqin
+leverage ratio,performance metric,BDC and closed-end credit benchmarks,https://www.blackrock.com/aladdin/discover/press-release/blackrock-aladdin-expands-private-credit-solutions-on-preqin
+net credit spread,performance metric,StepStone private-debt allocation paper,https://www.stepstonegroup.com/news-insights/a-systematic-approach-to-private-debt-allocation-in-institutional-portfolios/
+credit stress loss,performance metric,StepStone risk measure for private debt,https://www.stepstonegroup.com/news-insights/a-systematic-approach-to-private-debt-allocation-in-institutional-portfolios/
+robust optimization,method,StepStone private-debt portfolio construction,https://www.stepstonegroup.com/news-insights/a-systematic-approach-to-private-debt-allocation-in-institutional-portfolios/
+clustering,method,StepStone groups debt sub-strategies,https://www.stepstonegroup.com/news-insights/a-systematic-approach-to-private-debt-allocation-in-institutional-portfolios/
+GP-led secondaries,market structure,StepStone liquidity research; also a job theme,https://institutional.fidelity.com/institutions/insights/topics/investing-ideas/navigating-private-markets-in-2026-questions-and-answers-with-stepstone-and-fidelity
+J-curve,market structure,HarbourVest evergreen commentary,https://www.linkedin.com/posts/harbourvest-partners_private-equity-offers-compelling-long-term-activity-7419832506079944704-txfm
+quantitative equity,feeder skill,required on HarbourVest QIS postings,https://harbourvest.wd5.myworkdayjobs.com/en-US/HVP/job/Quantitative-Researcher--Private-Equity-Secondaries_R2034-4
+Python,job skill,every current quant posting in the table,data/raw/current_postings.csv
+SQL,job skill,every current quant posting in the table,data/raw/current_postings.csv
