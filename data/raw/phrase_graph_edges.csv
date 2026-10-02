@@ -1,0 +1,62 @@
+phrase_a,phrase_b,docs_together,ppmi
+"private credit","private equity",6,0.148
+"private equity","software",5,0.435
+"private equity","secondaries",5,0.253
+"liquidity","private equity",5,0.099
+"private equity","real estate",5,0.099
+"distributions","secondaries",4,0.818
+"infrastructure","private credit",4,0.754
+"liquidity","secondaries",4,0.482
+"real estate","volatility",4,0.482
+"private equity","venture capital",4,0.435
+"infrastructure","private equity",4,0.435
+"distributions","private equity",4,0.212
+"liquidity","private credit",4,0.194
+"private equity","volatility",4,0.03
+"distributions","gp-led secondaries",3,1.224
+"gp-led secondaries","secondaries",3,1.041
+"distributions","venture capital",3,0.936
+"infrastructure","software",3,0.936
+"benchmarks","software",3,0.936
+"secondaries","venture capital",3,0.754
+"distributions","software",3,0.713
+"real estate","venture capital",3,0.6
+"infrastructure","real estate",3,0.6
+"secondaries","software",3,0.531
+"benchmarks","private credit",3,0.466
+"dry powder","private equity",3,0.435
+"distributions","liquidity",3,0.376
+"liquidity","software",3,0.376
+"private credit","software",3,0.243
+"liquidity","volatility",3,0.194
+"real estate","secondaries",3,0.194
+"benchmarks","private equity",3,0.148
+"private credit","real estate",3,0.0
+"benchmarks","direct lending",2,1.447
+"direct lending","software",2,1.224
+"volatility","volatility laundering",2,1.041
+"private capital","venture capital",2,1.041
+"liquidity","volatility laundering",2,0.887
+"public markets","real estate",2,0.887
+"distributions","dry powder",2,0.818
+"dry powder","software",2,0.818
+"benchmarks","infrastructure",2,0.754
+"software","venture capital",2,0.531
+"gp-led secondaries","liquidity",2,0.482
+"private equity","public markets",2,0.435
+"direct lending","private equity",2,0.435
+"venture capital","volatility",2,0.348
+"infrastructure","secondaries",2,0.348
+"fundraising","private credit",2,0.348
+"benchmarks","liquidity",2,0.194
+"liquidity","venture capital",2,0.194
+"infrastructure","liquidity",2,0.194
+"gp-led secondaries","private equity",2,0.03
+"fundraising","private equity",2,0.03
+"private capital","private equity",2,0.03
+"private credit","volatility",2,0.0
+"liquidity","real estate",2,0.0
+"distributions","real estate",2,0.0
+"secondaries","volatility",2,0.0
+"private credit","secondaries",2,0.0
+"real estate","software",2,0.0

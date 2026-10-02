@@ -6,15 +6,17 @@ This year's private-markets notes, October 2025 through October 2026, are in `da
 
 Jane Street and Citadel Securities published nothing on private markets in this window. Jane Street's public notes are intern machine-learning writeups. Citadel Securities publishes market-structure notes. Citadel the hedge fund has no research series.
 
-## Word graph
+## Phrase graph
 
-The figure is a document co-occurrence graph on this year's notes. A word is kept if it appears in at least three notes. A line means the two words appear in the same note at least twice. Line width is the number of shared notes.
+The figure is a phrase co-occurrence graph on this year's notes. A phrase is a fixed collocation, not a single token: real estate is one unit, as are private equity, private credit, gp-led secondaries, dry powder, and volatility laundering. Plural forms are merged. A phrase is kept if it appears in at least two notes. A line means the two phrases appear in the same note at least twice.
 
-The score in `data/raw/word_graph_edges.csv` is positive pointwise mutual information. For two words in a note, PPMI is the log of their joint note rate divided by the product of their separate note rates, floored at zero. A high score means the pair shows up together more often than the word frequencies would imply. No topic model was fit.
+Dot color is strength. Strength is the shared-note count summed across that phrase's links. Dark dots are tied to more of the other phrases. Pale dots are weakly tied.
 
-Real and estate are the tight pair: they almost only appear together, so the association is high. Equity and credit share the most notes, seven, but the association is weaker because both words are common. Secondaries, liquidity, and public marks sit on the equity side. Volatility sits with the desmoothing notes.
+The score in `data/raw/phrase_graph_edges.csv` is positive pointwise mutual information: the log of the joint note rate divided by the product of the two phrase rates, floored at zero. A high score means the pair shows up together more often than the phrase frequencies would imply. No topic model was fit.
 
-![Words that appear in the same notes](figures/word_graph.png)
+Private equity is the hub. Real estate stays intact and links to private equity and volatility. Secondaries links to liquidity and distributions. Volatility laundering is a pale dot: it is specific to the AQR notes, so it shares few links.
+
+![Phrases that appear in the same notes](figures/phrase_graph.png)
 
 ## This year, by firm
 
