@@ -2,70 +2,42 @@
 
 This repo was analyzed using Grok.
 
-The figures are frequency counts and a firm-by-category contingency table on 41 hand-coded phrases. No regression, topic model, or classifier was fit. A year trend is not identified: each phrase has one source date.
+Oracle of research these firms publish. One row per note in `data/raw/documents.csv`. `python src/oracle.py` prints the same list by firm.
 
-Language of private-markets quant research: what firms publish, and what they ask for.
+Jane Street and Citadel do not publish trading research. Jane Street publishes intern machine-learning notes. Citadel Securities publishes market-structure notes. Citadel the hedge fund is absent because it does not publish a research series.
 
-First-pass sources are HarbourVest QIS, PitchBook, BlackRock Aladdin / Preqin, and StepStone. Phrases are in `data/raw/research_keywords.csv`. Counts below use that table only.
+## By firm
 
-## Firm by category
+HarbourVest QIS. Investment-level buyout benchmarks, and a NAV nowcast that estimates value before the GP report.
 
-HarbourVest writes about decisions. PitchBook writes about methods and multiples. BlackRock and StepStone are split between methods and performance metrics.
+PitchBook. Cash-flow pacing and manager scores. IRR becomes a z-score inside vintage and strategy.
 
-![Phrases by firm and category](figures/firm_category.png)
+BlackRock Aladdin / Preqin. Peer benchmarks from LP cash flows, then asset-level private credit: leverage, defaults, recoveries.
 
-| Firm | Method | Performance metric | Decision use | Data object |
-| --- | ---: | ---: | ---: | ---: |
-| HarbourVest | 3 | 1 | 6 | 2 |
-| PitchBook | 6 | 3 | 0 | 1 |
-| BlackRock | 3 | 2 | 1 | 1 |
-| StepStone | 2 | 2 | 0 | 0 |
+StepStone. Private-debt allocation with net credit spread and credit stress loss. GP-led secondaries as a liquidity channel.
 
-HarbourVest's decision-use phrases are sector weight, timing, public-market comparison, manager selection, portfolio construction, and liquidity. PitchBook's methods are cash-flow forecasting, the Takahashi-Alexander model, Monte Carlo, z-score, manager score, and cash-flow speed.
+MSCI. The longest stale-price series. A 2020 nowcast through smooth NAVs, a 2026 daily NAV index, and a private real estate split of core versus value-added and opportunistic.
 
-## Category mix
+Hamilton Lane. Desmoothing. Observed buyout beta about 0.4. Desmoothed beta a bit above 1. The same adjustment is applied to real estate, infrastructure, and natural resources.
 
-Methods are the largest class. Market structure is two phrases: J-curve and GP-led secondaries.
+AQR. Volatility laundering: a smooth mark is not low risk. The 2026 note extends that claim to private credit.
 
-![Phrase count by category](figures/category_counts.png)
+Arctos. Post-2020 smoothing is asymmetric. Write-ups were fast. Write-downs lagged.
 
-| Category | Phrases |
-| --- | ---: |
-| Method | 14 |
-| Performance metric | 8 |
-| Decision use | 7 |
-| Data object | 4 |
-| Market structure | 2 |
-| Research claim | 2 |
-| Job skill | 2 |
-| Asset class | 1 |
-| Feeder skill | 1 |
+privateMetrics. A monthly market valuation anchor so the NAV does not stay stale.
 
-## Research language and job language
+Jane Street. September 2026 intern notes: autoregressive diffusion on US equity events, and LLM memorization on cricket previews. No alpha, no private markets.
 
-Five phrases appear only in job text: Bayesian, time series, quantitative equity, Python, and SQL. Four appear in both: nowcasting, Monte Carlo, liquidity management, and GP-led secondaries. The rest are published research.
+Citadel Securities. Scott Rubner market-structure notes. First half of 2026: index concentration, passive ownership, retail flow, leverage, volatility. February 2026: single-stock dispersion and thin depth. No strategy research.
 
-![Published research vs job-only language](figures/research_vs_job.png)
+Two Sigma. Venn factor lens for 2024: equity styles, trend, equity short volatility. A public risk report, not a signal note.
 
-Python and SQL are in every current posting and are not tied to one firm. Quantitative equity is the HarbourVest feeder requirement. Bayesian and time series are named only on the BlackRock private-markets modeler seat.
+## What repeats
 
-## Specific themes
+Stale pricing is the private-markets theme. MSCI, Hamilton Lane, AQR, Arctos, and privateMetrics are describing the same lag. HarbourVest's nowcast is the product version of that lag.
 
-These rows are in `data/raw/theme_keywords.csv`. They are not in the charts above.
+The public-market shops do not write about that lag. Jane Street writes about generating event data. Citadel Securities writes about who is trading and how concentrated the index is.
 
-The repeated research problem is stale reported value. Firms use different names for it.
+## Limit
 
-| Theme | Where it shows up |
-| --- | --- |
-| Stale pricing | Godwin (2022) uses secondary transaction prices and finds 75 to 92 percent of reported NAV variation is stale in PE, venture, real estate, and natural resources. MSCI nowcasts through smooth NAVs. privateMetrics anchors valuations to a monthly private-market benchmark so the NAV does not stay stale. AQR calls the same fact volatility laundering. |
-| Return smoothing | Couts (2024) on private-equity real estate: autocorrelation comes from assets that are hard to value, not from internal versus external appraisal. Arctos finds post-2020 smoothing is asymmetric, fast write-ups and lagged write-downs. Hamilton Lane treats appraisal values as slower than traded prices. |
-| Desmoothing | Hamilton Lane compares observed volatility, statistical desmoothing, and public-market proxies. Observed buyout beta is about 0.4. Their desmoothed beta is a bit above 1. The same de-smoothed series covers private real estate, infrastructure, and natural resources. |
-| Private real estate | MSCI's fund index splits core and core-plus from value-added and opportunistic after the 2022 rate rise. Core held up better. StepStone cites a near-zero long-run correlation with the S&P 500. MSCI's Q1 2026 benchmarks have private real estate near a zero quarterly return, behind infrastructure and natural resources. |
-| Valuation lag | Ercan, Kaplan, and Strebulaev measure staleness as the share of past quarters with a zero reported return. Staler investments and more frequent markdowns have worse later outcomes. Couts calls unchanged appraisals lame valuations. |
-| Daily NAV | MSCI turns LP cash flows and historical valuations into daily private equity and private credit indexes. |
-
-Firms added here: MSCI, Hamilton Lane, Arctos, privateMetrics, Ares, AQR. Ares has a quantitative research head, Avi Turetsky. The public note is about explaining performance, not a published model.
-
-## Not a time trend
-
-Counting phrases by year would repeat the document list, not a shift in research. A trend chart needs the same phrases counted in notes from 2022 through 2026.
+This is a document list with a theme tag, not a fitted model. A firm with one note is not a trend. MSCI and AQR are the only names here with the same claim restated across years.
