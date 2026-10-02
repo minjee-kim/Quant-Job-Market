@@ -1,8 +1,12 @@
 # Private market trends
 
+This repo was created by Grok.
+
+The figures are frequency counts and a firm-by-category contingency table on 41 hand-coded phrases. No regression, topic model, or classifier was fit. A year trend is not identified: each phrase has one source date.
+
 Language of private-markets quant research: what firms publish, and what they ask for.
 
-Sources are HarbourVest QIS, PitchBook, BlackRock Aladdin / Preqin, and StepStone. Phrases are in `data/raw/research_keywords.csv` (41 rows). Counts below use that table only.
+Sources are HarbourVest QIS, PitchBook, BlackRock Aladdin / Preqin, and StepStone. Phrases are in `data/raw/research_keywords.csv`. Counts below use that table only.
 
 ## Firm by category
 
@@ -47,4 +51,4 @@ Python and SQL are in every current posting and are not tied to one firm. Quanti
 
 ## Not a time trend
 
-Each phrase has one source date. Counting them by year would repeat the document list, not a shift in research. A trend chart needs the same phrases counted in notes from 2022 through 2026.
+Counting phrases by year would repeat the document list, not a shift in research. A trend chart needs the same phrases counted in notes from 2022 through 2026.
