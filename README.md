@@ -1,4 +1,4 @@
-# Quant-Job-Market
+# Private market trends
 
 What are private-markets quant teams researching, and what language do they use?
 
