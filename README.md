@@ -1,6 +1,6 @@
 # Private market trends
 
-This repo was created by Grok.
+This repo was analyzed using Grok.
 
 The figures are frequency counts and a firm-by-category contingency table on 41 hand-coded phrases. No regression, topic model, or classifier was fit. A year trend is not identified: each phrase has one source date.
 
