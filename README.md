@@ -2,42 +2,28 @@
 
 This repo was analyzed using Grok.
 
-Oracle of research these firms publish. One row per note in `data/raw/documents.csv`. `python src/oracle.py` prints the same list by firm.
+Last-year private-markets notes, October 2025 through October 2026, are in `data/raw/last_year.csv`. Older notes stay in `data/raw/documents.csv`.
 
-Jane Street and Citadel do not publish trading research. Jane Street publishes intern machine-learning notes. Citadel Securities publishes market-structure notes. Citadel the hedge fund is absent because it does not publish a research series.
+Jane Street and Citadel Securities published nothing on private markets in this window. Jane Street's public notes are intern machine-learning writeups. Citadel Securities publishes market-structure notes. Citadel the hedge fund has no research series.
 
-## By firm
+## Last year, by firm
 
-HarbourVest QIS. Investment-level buyout benchmarks, and a NAV nowcast that estimates value before the GP report.
+HarbourVest. [Q3 2025 benchmark release](https://www.harbourvest.com/harbourvest-partners-releases-q3-2025-private-equity-benchmark-performance-data/), 11 March 2026. Sector returns from deal-level data. [Software repricing](https://www.alternativeswatch.com/2026/08/31/software-valuations-private-equity-returns-harbourvest/), 31 August 2026, is coverage of the next release: global buyout benchmark down 1.6 percent in Q1, information technology down 5.0 percent.
 
-PitchBook. Cash-flow pacing and manager scores. IRR becomes a z-score inside vintage and strategy.
+PitchBook. [2025 US PE breakdown](https://pitchbook.com/news/reports/2025-annual-us-pe-breakdown), 14 January 2026. [Q1 2026 private capital indexes](https://pitchbook.com/news/reports/q1-2026-pitchbook-private-capital-indexes), 17 July 2026. [Fundraising through H1 2026](https://pitchbook.com/news/articles/four-charts-private-capital-fundraising-remains-bleak-through-h1-2026), 14 September 2026. The first two are gated.
 
-BlackRock Aladdin / Preqin. Peer benchmarks from LP cash flows, then asset-level private credit: leverage, defaults, recoveries.
+BlackRock. [Benchmarking expansion](https://www.investmentnews.com/alternatives/blackrock-expands-aladdins-private-markets-benchmarking-tools/267312), 8 July 2026. [Private credit on Preqin](https://www.blackrock.com/aladdin/discover/press-release/blackrock-aladdin-expands-private-credit-solutions-on-preqin), 28 September 2026.
 
-StepStone. Private-debt allocation with net credit spread and credit stress loss. GP-led secondaries as a liquidity channel.
+StepStone. [Secondaries to the rescue](https://www.stepstonegroup.com/news-insights/1000-words-or-less-secondaries-to-the-rescue/), 18 August 2025. [2026 private equity house views](https://www.stepstonegroup.com/news-insights/stepstone-private-equity-2026-market-outlook/), 9 March 2026. [Navigating private markets in 2026](https://institutional.fidelity.com/institutions/insights/topics/investing-ideas/navigating-private-markets-in-2026-questions-and-answers-with-stepstone-and-fidelity), 2 April 2026.
 
-MSCI. The longest stale-price series. A 2020 nowcast through smooth NAVs, a 2026 daily NAV index, and a private real estate split of core versus value-added and opportunistic.
+MSCI. [Private real estate factor model](https://www.msci.com/research-and-insights/paper/the-msci-private-real-estate-factor-model), 17 December 2025. Bayesian desmoothing. [Daily NAV indexes](https://www.msci.com/discover-msci/media-room/msci-launches-daily-private-markets-indexes-accelerating-transparency-drive), 25 March 2026. [Q1 2026 benchmarks](https://www.msci.com/data-and-analytics/private-asset-solutions/private-capital-benchmarks-summary). [Strategy and private real estate](https://www.msci.com/research-and-insights/blog-post/how-strategy-shaped-returns-in-private-real-estate), 12 August 2026.
 
-Hamilton Lane. Desmoothing. Observed buyout beta about 0.4. Desmoothed beta a bit above 1. The same adjustment is applied to real estate, infrastructure, and natural resources.
+Hamilton Lane. [2026 market overview](https://www.hamiltonlane.com/2026-market-overview): liquidity shortfall, evergreen funds, secondaries. [Q1 2026 market brief](https://www.hamiltonlane.com/getcontentasset/728a484a-8fea-49dd-9226-d776167a8210/dfc3d011-8f63-43f6-9ed8-4b444333a1d0/q1-2026-market-brief.pdf?language=en-us), volatility de-smoothed series.
 
-AQR. Volatility laundering: a smooth mark is not low risk. The 2026 note extends that claim to private credit.
+AQR. [I did not predict what is going on in privates](https://www.aqr.com/Insights/Perspectives/I-Did-Not-Predict-What-is-Going-on-in-Privates), 25 March 2026. [Spring 2026 interview](https://www.aqr.com/-/media/AQR/Documents/Journal-Articles/Interview-with-Cliff-Asness-Journal-of-Private-Markets-Investing--Spring-2026.pdf?sc_lang=en) on volatility laundering.
 
-Arctos. Post-2020 smoothing is asymmetric. Write-ups were fast. Write-downs lagged.
+Arctos and privateMetrics have no private-markets note dated inside this window in the table. Their smoothing notes are from May 2025 and May 2024.
 
-privateMetrics. A monthly market valuation anchor so the NAV does not stay stale.
+## What the year says
 
-Jane Street. September 2026 intern notes: autoregressive diffusion on US equity events, and LLM memorization on cricket previews. No alpha, no private markets.
-
-Citadel Securities. Scott Rubner market-structure notes. First half of 2026: index concentration, passive ownership, retail flow, leverage, volatility. February 2026: single-stock dispersion and thin depth. No strategy research.
-
-Two Sigma. Venn factor lens for 2024: equity styles, trend, equity short volatility. A public risk report, not a signal note.
-
-## What repeats
-
-Stale pricing is the private-markets theme. MSCI, Hamilton Lane, AQR, Arctos, and privateMetrics are describing the same lag. HarbourVest's nowcast is the product version of that lag.
-
-The public-market shops do not write about that lag. Jane Street writes about generating event data. Citadel Securities writes about who is trading and how concentrated the index is.
-
-## Limit
-
-This is a document list with a theme tag, not a fitted model. A firm with one note is not a trend. MSCI and AQR are the only names here with the same claim restated across years.
+MSCI, HarbourVest, and Hamilton Lane published measurement. PitchBook and StepStone published market state: fundraising, exits, secondaries. AQR published the objection to the marks.
