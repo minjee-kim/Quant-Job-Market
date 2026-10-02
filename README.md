@@ -2,11 +2,27 @@
 
 This repo was analyzed using Grok.
 
-Last-year private-markets notes, October 2025 through October 2026, are in `data/raw/last_year.csv`. Older notes stay in `data/raw/documents.csv`.
+This year's private-markets notes, October 2025 through October 2026, are in `data/raw/last_year.csv`. Older notes stay in `data/raw/documents.csv`.
 
 Jane Street and Citadel Securities published nothing on private markets in this window. Jane Street's public notes are intern machine-learning writeups. Citadel Securities publishes market-structure notes. Citadel the hedge fund has no research series.
 
-## Last year, by firm
+## Word graph
+
+The figure is a document co-occurrence graph on this year's notes. A word is kept if it appears in at least three notes. A line means the two words appear in the same note at least twice. Line width is the number of shared notes.
+
+The score in `data/raw/word_graph_edges.csv` is positive pointwise mutual information. For words \(a\) and \(b\) in \(n\) notes,
+
+\[
+\mathrm{PPMI}(a,b)=\max\left(0,\log\frac{P(a,b)}{P(a)P(b)}\right)
+\]
+
+where \(P(a)\) is the share of notes containing \(a\), and \(P(a,b)\) is the share containing both. No topic model was fit.
+
+Real and estate are the tight pair: they almost only appear together, so the association is high. Equity and credit share the most notes, seven, but the association is weaker because both words are common. Secondaries, liquidity, and public marks sit on the equity side. Volatility sits with the desmoothing notes.
+
+![Words that appear in the same notes](figures/word_graph.png)
+
+## This year, by firm
 
 HarbourVest. [Q3 2025 benchmark release](https://www.harbourvest.com/harbourvest-partners-releases-q3-2025-private-equity-benchmark-performance-data/), 11 March 2026. Sector returns from deal-level data. [Software repricing](https://www.alternativeswatch.com/2026/08/31/software-valuations-private-equity-returns-harbourvest/), 31 August 2026, is coverage of the next release: global buyout benchmark down 1.6 percent in Q1, information technology down 5.0 percent.
 
