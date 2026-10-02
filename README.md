@@ -10,13 +10,7 @@ Jane Street and Citadel Securities published nothing on private markets in this 
 
 The figure is a document co-occurrence graph on this year's notes. A word is kept if it appears in at least three notes. A line means the two words appear in the same note at least twice. Line width is the number of shared notes.
 
-The score in `data/raw/word_graph_edges.csv` is positive pointwise mutual information. For words \(a\) and \(b\) in \(n\) notes,
-
-\[
-\mathrm{PPMI}(a,b)=\max\left(0,\log\frac{P(a,b)}{P(a)P(b)}\right)
-\]
-
-where \(P(a)\) is the share of notes containing \(a\), and \(P(a,b)\) is the share containing both. No topic model was fit.
+The score in `data/raw/word_graph_edges.csv` is positive pointwise mutual information. For two words in a note, PPMI is the log of their joint note rate divided by the product of their separate note rates, floored at zero. A high score means the pair shows up together more often than the word frequencies would imply. No topic model was fit.
 
 Real and estate are the tight pair: they almost only appear together, so the association is high. Equity and credit share the most notes, seven, but the association is weaker because both words are common. Secondaries, liquidity, and public marks sit on the equity side. Volatility sits with the desmoothing notes.
 
